@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/e-comerce/static/css/main.c962faeb.css",
+    "main.js": "/e-comerce/static/js/main.9801efff.js",
+    "static/js/787.6b90d7ce.chunk.js": "/e-comerce/static/js/787.6b90d7ce.chunk.js",
+    "static/media/unagi_don.png": "/e-comerce/static/media/unagi_don.c0b8b1df9fac3cfa7047.png",
+    "static/media/chirashi_fruit_de_mer.png": "/e-comerce/static/media/chirashi_fruit_de_mer.e98e80eda48fe78983f0.png",
+    "static/media/okomiyaki_crevette.png": "/e-comerce/static/media/okomiyaki_crevette.a616431cb15fde3c4c09.png",
+    "static/media/katsu_curry_porc.png": "/e-comerce/static/media/katsu_curry_porc.07c6ccdd4187c16c5d5a.png",
+    "static/media/gyoza_porc.png": "/e-comerce/static/media/gyoza_porc.465fc0135ee47b4a864a.png",
+    "static/media/ramen_champignons.png": "/e-comerce/static/media/ramen_champignons.6ff633eedaf6de1385fc.png",
+    "static/media/udon_poulet.png": "/e-comerce/static/media/udon_poulet.0b5754d7dd5aa84a7f18.png",
+    "static/media/tempura_legume.png": "/e-comerce/static/media/tempura_legume.2a17a81a5fcf19203f19.png",
+    "static/media/yakitori_poulet.png": "/e-comerce/static/media/yakitori_poulet.f1d0284e7c6728153d26.png",
+    "static/media/donburi_boeuf.png": "/e-comerce/static/media/donburi_boeuf.33703165a25ff124dde1.png",
+    "static/media/sashimi_saumon.png": "/e-comerce/static/media/sashimi_saumon.80b3726aebecc729ce87.png",
+    "static/media/soupe_miso.png": "/e-comerce/static/media/soupe_miso.f4b022f014ed262969ca.png",
+    "static/media/tempura_crevette.png": "/e-comerce/static/media/tempura_crevette.46b0117d68ad95a30726.png",
+    "static/media/sushi_saumon_avocat.png": "/e-comerce/static/media/sushi_saumon_avocat.7d93b8661c862fbf3281.png",
+    "static/media/maki_comcombre.png": "/e-comerce/static/media/maki_comcombre.00278b89cb756c48ac0a.png",
+    "index.html": "/e-comerce/index.html",
+    "main.c962faeb.css.map": "/e-comerce/static/css/main.c962faeb.css.map",
+    "main.9801efff.js.map": "/e-comerce/static/js/main.9801efff.js.map",
+    "787.6b90d7ce.chunk.js.map": "/e-comerce/static/js/787.6b90d7ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c962faeb.css",
+    "static/js/main.9801efff.js"
+  ]
+}
