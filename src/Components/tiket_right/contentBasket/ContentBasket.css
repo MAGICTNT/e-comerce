@@ -1,0 +1,51 @@
+.contentBasket{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.contentBasketTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBasketTop p{ font-weight: 600}
+
+.contentBasketLabel{
+    width: 80%;
+}
+
+.contentBasketItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBasketPrix{
+    width: 50%;
+    padding-left: 5%;
+}
+
+.contentBasketQuantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.contentBasketQuantity p {
+    padding: 0 2px;
+}
+
+.contentBasketbuttonUp{}
+
+.contentBasketbuttonDown{}
+
+.contentBasketbuttonDelete{
+    /*height: 20%;*/
+}

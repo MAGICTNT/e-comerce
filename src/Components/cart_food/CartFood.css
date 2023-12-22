@@ -1,0 +1,53 @@
+.cart_food{
+    margin-top: 25px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.cart_food_label{
+    /*color: white;*/
+    font-weight: 700;
+
+}
+
+.cart_food_ingredient{
+    width: 80%;
+    margin: 10px auto;
+    text-wrap: inherit;
+}
+.cart_food_prix{
+}
+.cart_food_button{
+    cursor: pointer;
+    background: none;
+    border: 1px solid burlywood;
+    width: 95px;
+    height: 35px;
+    border-radius: 25px;
+}
+.cart_food_button:hover{
+    background: burlywood;
+    color: white;
+}
+
+.cart_food_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart_food_img{
+    width: 220px;
+    height: 140px;
+    margin: 10px auto;
+    border-radius: 15px;
+}
