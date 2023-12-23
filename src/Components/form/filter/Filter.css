@@ -1,7 +1,29 @@
-.headerCheckbox{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 50px;
+
+
+@media (min-aspect-ratio: 16/9) {
+    .headerCheckbox{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 50px;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .headerCheckbox{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .headerCheckbox{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
 }

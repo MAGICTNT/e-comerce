@@ -1,10 +1,11 @@
 import React from 'react';
+import './radio.css'
 
 const Radio = ({ checked, onChange, value }) => {
     const id = `radio-${value}`;
 
     return (
-        <div>
+        <div className="radio">
             <input
                 type="radio"
                 id={id}

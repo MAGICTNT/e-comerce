@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from "../Radio";
+import Radio from "../radio/Radio";
 import './Filter.css'
 const Filter = ({value, onChange}) => {
     return (

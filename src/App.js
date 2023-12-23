@@ -5,7 +5,7 @@ import Header from "./Components/header/Header";
 import { useState} from "react";
 import { PanierContextProvider} from "./Context/paniper-context/Panier-context";
 import TiketRight from "./Components/tiket_right/TiketRight";
-import Radio from "./Components/form/Radio";
+import Radio from "./Components/form/radio/Radio";
 import Filter from "./Components/form/filter/Filter";
 
 
