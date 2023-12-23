@@ -1,15 +1,36 @@
-.tiketRight{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-}
-.tiketRightTotal{}
-.tiketRightContaine{
-    width: 100%;
-}
-.tiketRightFood{
 
+
+@media (min-aspect-ratio: 16/9) {
+    .tiketRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+    }
+    .tiketRightTotal{}
+    .tiketRightContaine{
+        width: 100%;
+    }
+    .tiketRightFood{
+
+    }
 }
+
+@media (max-aspect-ratio: 16/9) {
+    .tiketRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+    }
+    .tiketRightTotal{}
+    .tiketRightContaine{
+        width: 100%;
+    }
+    .tiketRightFood{
+
+    }}

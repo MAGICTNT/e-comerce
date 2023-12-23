@@ -1,27 +1,70 @@
-body{
-  color: white;
-  background-color: #616060;
+
+
+@media (min-aspect-ratio: 16/9) {
+  body{
+    color: white;
+    background-color: #616060;
+  }
+
+  .container{
+    display: flex;
+  }
+
+  .container-food{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .tiket-lateral{
+    width: 30%;
+  }
+  .ticket{
+    width: 20%;
+    margin: 0 auto;
+  }
 }
 
-.container{
-  display: flex;
+@media (max-aspect-ratio: 16/9) {
+  body{
+    color: white;
+    background-color: #616060;
+  }
+
+  .container{
+    display: flex;
+  }
+
+  .container-food{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .ticket{
+    display: none;
+  }
 }
 
-.container-food{
-  width: 70%;
-  /*display: grid;*/
-  /*grid-template-columns: 1fr 1fr 1fr ;*/
-  /*margin-top: 50px;*/
-  /*gap: 30px;*/
-  display: flex;
-  /*border: 3px solid darkred;*/
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.tiket-lateral{
-  width: 30%;
-}
-.ticket{
-  width: 20%;
-  margin: 0 auto;
+@media only screen and (max-width: 767px) {
+  body{
+    color: white;
+    background-color: #616060;
+  }
+
+  .container{
+    display: flex;
+  }
+
+  .container-food{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .ticket{
+    display: none;
+  }
 }

@@ -18,19 +18,7 @@ const TiketRight = () => {
                             down={reductItemToCart}
                             deleteAll={deleteItemToCart}
                         />
-                        // <div key={item.id}>
-                        //     <p>
-                        //         {item.name}
-                        //     </p>
-                        //     <p>prix {(item.price * item.quantity).toFixed(2)} €</p>
-                        //     <div>
-                        //         quantity:
-                        //         <button onClick={() => addMoreItemToCart(item.id, 1)}>+</button>
-                        //         {item.quantity}
-                        //         <button onClick={() => reductItemToCart(item.id, 1)}>-</button>
-                        //     </div>
-                        //     <button onClick={() => deleteItemToCart(item.id)}>delete all</button>
-                        // </div>
+
                     )}</div>
 
 

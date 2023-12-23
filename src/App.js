@@ -5,6 +5,8 @@ import Header from "./Components/header/Header";
 import { useState} from "react";
 import { PanierContextProvider} from "./Context/paniper-context/Panier-context";
 import TiketRight from "./Components/tiket_right/TiketRight";
+import Radio from "./Components/form/Radio";
+import Filter from "./Components/form/filter/Filter";
 
 
 function App() {
@@ -13,36 +15,40 @@ function App() {
         setChoix(event.target.value);
     };
     return (
-      <PanierContextProvider>
-          <Header choixRegime={choix} handleChoix={handleAlimentationChange}/>
-          <div className="container">
-              <div className="container-food">
-                  {FOOD_MENU.map((food) => food.regime == choix ? <CartFood
-                          key={food.id}
-                          id={food.id}
-                          label={food.name}
-                          img={food.photo}
-                          ingredients={food.ingredient}
-                          prix={food.prix}
-                      />
-              : choix === "all"  ? <CartFood
-                              key={food.id}
-                              id={food.id}
-                              label={food.name}
-                              img={food.photo}
-                              ingredients={food.ingredient}
-                              prix={food.prix}
-                          />
-                          : ""
+        <PanierContextProvider>
+            <Header />
+            <Filter value={choix} onChange={handleAlimentationChange}/>
+            <div>
 
-                  )}
-              </div>
-              <div className="ticket">
-                  <TiketRight/>
-              </div>
-          </div>
+            </div>
+            <div className="container">
+                <div className="container-food">
+                    {FOOD_MENU.map((food) => food.regime == choix ? <CartFood
+                                key={food.id}
+                                id={food.id}
+                                label={food.name}
+                                img={food.photo}
+                                ingredients={food.ingredient}
+                                prix={food.prix}
+                            />
+                            : choix === "all" ? <CartFood
+                                    key={food.id}
+                                    id={food.id}
+                                    label={food.name}
+                                    img={food.photo}
+                                    ingredients={food.ingredient}
+                                    prix={food.prix}
+                                />
+                                : ""
 
-      </PanierContextProvider>
+                    )}
+                </div>
+                <div className="ticket">
+                    <TiketRight/>
+                </div>
+            </div>
+
+        </PanierContextProvider>
     );
 }
 

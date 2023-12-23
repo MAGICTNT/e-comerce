@@ -7,7 +7,10 @@ const ContentBasket = ({item,up,down,deleteAll}) => {
                 <p className="contentBasketLabel">
                     {item.name}
                 </p>
-                <button className="contentBasketbuttonDelete" onClick={() => deleteAll(item.id)}>d</button>
+                <button className="contentBasketbuttonDelete" onClick={() => deleteAll(item.id)}>
+                    <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/trash--v1.png"
+                         alt="trash--v1"/>
+                </button>
             </div>
 
             <div className="contentBasketItem">
@@ -19,6 +22,7 @@ const ContentBasket = ({item,up,down,deleteAll}) => {
                     <button className="contentBasketbuttonDown" onClick={() => down(item.id, 1)}>-</button>
                 </div>
             </div>
+            <hr />
         </div>
     );
 };

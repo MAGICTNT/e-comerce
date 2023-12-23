@@ -42,10 +42,30 @@
     padding: 0 2px;
 }
 
-.contentBasketbuttonUp{}
+.contentBasketbuttonUp{
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+}
 
-.contentBasketbuttonDown{}
+.contentBasketbuttonDown{
+    background-color: darkblue;
+    color: white;
+    border-radius: 25px;
+}
 
 .contentBasketbuttonDelete{
-    /*height: 20%;*/
+   background: none;
+    border: none;
 }
+.contentBasket hr{
+    display: none;
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .contentBasket hr{
+        display: inherit;
+        width: 100%;
+    }
+}
+

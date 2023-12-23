@@ -8,12 +8,12 @@ const CartFood = ({id, label, img="http://via.placeholder.com/220x140", ingredie
 
     const numberIngredient = ingredients.length
     return (
-        <div className="cart_food" >
+        <div className="cart_food">
             <p className="cart_food_label">{label}</p>
-            <img className="cart_food_img" src={require(`../../assets/${img}`)} alt=""/>
+            <img className="cart_food_img" src={require(`../../assets/img/${img}`)} alt=""/>
             <p className="cart_food_ingredient">{
-                ingredients.map((ingredients,i) =>
-                    i !== (numberIngredient-1) ? ingredients + ", " : ingredients )
+                ingredients.map((ingredients, i) =>
+                    i !== (numberIngredient - 1) ? ingredients + ", " : ingredients)
             }</p>
             <div className="cart_food_footer">
                 <p className="cart_food_prix"><strong>{prix}€</strong></p>
