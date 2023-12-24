@@ -11,9 +11,14 @@ import Filter from "./Components/form/filter/Filter";
 
 function App() {
     const [choix, setChoix]= useState("all")
+    // const handleAlimentationChange = (event) => {
+    //     setChoix(event.target.value);
+    // };
+
     const handleAlimentationChange = (event) => {
         setChoix(event.target.value);
     };
+
     return (
         <PanierContextProvider>
             <Header />

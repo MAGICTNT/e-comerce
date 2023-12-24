@@ -1,5 +1,19 @@
+.radio img{
+    display: none;
+}
+
 @media only screen and (max-width: 767px) {
     .radio{
         padding-bottom: 10px;
+        display: flex;
+    }
+    .radio img{
+        width: 25px;
+        height: 25px;
+        display: inherit;
+        padding: 10px;
+    }
+    .radio label{
+        display: none;
     }
 }
