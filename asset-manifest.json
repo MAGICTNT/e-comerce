@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-comerce/static/css/main.1360900b.css",
-    "main.js": "/e-comerce/static/js/main.700e7a46.js",
+    "main.css": "/e-comerce/static/css/main.9429ba26.css",
+    "main.js": "/e-comerce/static/js/main.1d6ad359.js",
     "static/js/787.6b90d7ce.chunk.js": "/e-comerce/static/js/787.6b90d7ce.chunk.js",
     "static/media/unagi_don.png": "/e-comerce/static/media/unagi_don.c0b8b1df9fac3cfa7047.png",
     "static/media/chirashi_fruit_de_mer.png": "/e-comerce/static/media/chirashi_fruit_de_mer.e98e80eda48fe78983f0.png",
@@ -19,12 +19,12 @@
     "static/media/sushi_saumon_avocat.png": "/e-comerce/static/media/sushi_saumon_avocat.7d93b8661c862fbf3281.png",
     "static/media/maki_comcombre.png": "/e-comerce/static/media/maki_comcombre.00278b89cb756c48ac0a.png",
     "index.html": "/e-comerce/index.html",
-    "main.1360900b.css.map": "/e-comerce/static/css/main.1360900b.css.map",
-    "main.700e7a46.js.map": "/e-comerce/static/js/main.700e7a46.js.map",
+    "main.9429ba26.css.map": "/e-comerce/static/css/main.9429ba26.css.map",
+    "main.1d6ad359.js.map": "/e-comerce/static/js/main.1d6ad359.js.map",
     "787.6b90d7ce.chunk.js.map": "/e-comerce/static/js/787.6b90d7ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1360900b.css",
-    "static/js/main.700e7a46.js"
+    "static/css/main.9429ba26.css",
+    "static/js/main.1d6ad359.js"
   ]
 }
