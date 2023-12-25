@@ -3,6 +3,14 @@ import {createPortal} from "react-dom";
 import Cart from "./Cart";
 import TiketRight from "../tiket_right/TiketRight";
 
+/**
+ * Composant de modal pour afficher le panier.
+ *
+ * @component
+ * @param {Object} props - Les propriétés du composant.
+ * @param {React.Ref} ref - Référence pour accéder impérativement aux méthodes de la modal.
+ * @returns {JSX.Element} - Le composant de modal.
+ */
 const CartModal = forwardRef(function Modal({}, ref){
 
     const dialog = useRef();

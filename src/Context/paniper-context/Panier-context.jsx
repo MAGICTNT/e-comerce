@@ -1,6 +1,20 @@
 import {createContext, useReducer} from "react";
 import {FOOD_MENU} from "../../Components/FOOD";
 
+/**
+ * Contexte de panier pour gérer les articles dans le panier.
+ *
+ * @typedef {Object} PanierContextType
+ * @property {Array} items - Liste des articles dans le panier.
+ * @property {function} addItemToCart - Fonction pour ajouter un article au panier.
+ * @property {function} addMoreItemToCart - Fonction pour augmenter la quantité d'un article dans le panier.
+ * @property {function} reductItemToCart - Fonction pour réduire la quantité d'un article dans le panier.
+ * @property {function} deleteItemToCart - Fonction pour supprimer un article du panier.
+ */
+
+/**
+ * @type {PanierContextType}
+ */
 export const PanierContext = createContext({
     items: [],
     addItemToCart: () => {},
@@ -9,6 +23,15 @@ export const PanierContext = createContext({
     deleteItemToCart: () => {},
 })
 
+/**
+ * Fonction pour ajouter un article au panier.
+ *
+ * @param {Object} existingElement - L'élément existant dans le panier.
+ * @param {number} existingElementItem - L'indice de l'élément existant dans la liste du panier.
+ * @param {Array} updateShopingItem - Liste mise à jour des articles dans le panier.
+ * @param {Object} action - L'action spécifiée pour la mise à jour du panier.
+ * @returns {Object} - Nouveau state du panier.
+ */
 function addToPanier(existingElement, existingElementItem, updateShopingItem, action) {
     if (existingElement) {
         // si element dans le panier
@@ -36,6 +59,16 @@ function addToPanier(existingElement, existingElementItem, updateShopingItem, ac
         items: updateShopingItem
     }
 }
+
+/**
+ * Fonction pour supprimer un article du panier.
+ *
+ * @param {Object} existingElement - L'élément existant dans le panier.
+ * @param {number} existingElementItem - L'indice de l'élément existant dans la liste du panier.
+ * @param {Array} updateShopingItem - Liste mise à jour des articles dans le panier.
+ * @param {Object} action - L'action spécifiée pour la mise à jour du panier.
+ * @returns {Object} - Nouveau state du panier.
+ */
 function deleteToPanier(existingElement, existingElementItem, updateShopingItem, action){
     const updatedItems = updateShopingItem.filter(item => item.id !== action.payload.productId);
     return {
@@ -43,6 +76,15 @@ function deleteToPanier(existingElement, existingElementItem, updateShopingItem,
     }
 }
 
+/**
+ * Fonction pour augmenter la quantité d'un article dans le panier.
+ *
+ * @param {Object} existingElement - L'élément existant dans le panier.
+ * @param {number} existingElementItem - L'indice de l'élément existant dans la liste du panier.
+ * @param {Array} updateShopingItem - Liste mise à jour des articles dans le panier.
+ * @param {Object} action - L'action spécifiée pour la mise à jour du panier.
+ * @returns {Object} - Nouveau state du panier.
+ */
 function addMoreToPanier(existingElement, existingElementItem, updateShopingItem, action){
     const updatedData = {
         ...updateShopingItem[existingElementItem],
@@ -53,6 +95,16 @@ function addMoreToPanier(existingElement, existingElementItem, updateShopingItem
         items: updateShopingItem
     }
 }
+
+/**
+ * Fonction pour réduire la quantité d'un article dans le panier.
+ *
+ * @param {Object} existingElement - L'élément existant dans le panier.
+ * @param {number} existingElementItem - L'indice de l'élément existant dans la liste du panier.
+ * @param {Array} updateShopingItem - Liste mise à jour des articles dans le panier.
+ * @param {Object} action - L'action spécifiée pour la mise à jour du panier.
+ * @returns {Object} - Nouveau state du panier.
+ */
 function reductToPanier(existingElement, existingElementItem, updateShopingItem, action){
     const updatedData = {
         ...updateShopingItem[existingElementItem],
@@ -71,6 +123,13 @@ function reductToPanier(existingElement, existingElementItem, updateShopingItem,
     }
 }
 
+/**
+ * Réducteur du panier qui gère les différentes actions de mise à jour du panier.
+ *
+ * @param {Object} state - État actuel du panier.
+ * @param {Object} action - L'action spécifiée pour la mise à jour du panier.
+ * @returns {Object} - Nouveau state du panier.
+ */
 const cartReducer = (state, action) => {
     const updateShopingItem = [...state.items];
     const existingElementItem = updateShopingItem.findIndex((item) => item.id === action.payload.productId)
@@ -89,6 +148,13 @@ const cartReducer = (state, action) => {
     }
 }
 
+/**
+ * Fournit le contexte du panier à l'ensemble de l'application.
+ *
+ * @param {Object} props - Propriétés du composant.
+ * @param {React.ReactNode} props.children - Les composants enfants encapsulés par ce contexte.
+ * @returns {JSX.Element} - Composant enveloppé dans le contexte du panier.
+ */
 export const PanierContextProvider = ({children}) => {
 
     const [cartState, cartDispatch] = useReducer(cartReducer, {

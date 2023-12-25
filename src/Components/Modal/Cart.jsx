@@ -2,24 +2,31 @@
 import {useContext} from "react";
 import {PanierContext} from "../../Context/paniper-context/Panier-context";
 
+/**
+ * Composant représentant le panier d'achat.
+ *
+ * @component
+ */
 const Cart = () => {
 
     const {items,updateItemQuantity} = useContext(PanierContext)
-    console.log(items.reduce((acc,item) => acc+item.price * item.quantity,0))
     const totalAmount = items.reduce((acc,item) => acc+item.price * item.quantity,0);
+
+    /**
+     * Calcul du montant total du panier en utilisant une fonction de calcul personnalisée.
+     *
+     * @param {Array} cart - Liste des articles dans le panier.
+     * @param {Array} products - Liste complète des produits disponibles.
+     * @returns {number} - Montant total du panier.
+     */
     const calculateTotalPrice = (cart, products) => {
-        console.log("pro", products.map((p) => p.price))
         const totalPrice = cart.reduce((acc, cartItem) => {
             const product = products.find(p => p.id === cartItem.productId);
-            console.log("total product: ",product)
             if (product) {
-                console.log("product.price", product.price)
                 return acc + product.price * cartItem.quantity;
             }
-            console.log("acc",acc)
             return acc;
         }, 0);
-        console.log("totalPrice",totalPrice)
         return totalPrice;
     };
     return(
