@@ -167,8 +167,9 @@ export const PanierContextProvider = ({children}) => {
     });
     useEffect(() => {
         // Sauvegarder le panier dans les cookies à chaque modification
-        setCookie("panier", cartState.items);
+        setCookie("panier", cartState.items, { sameSite: 'None', secure: true });
     }, [cartState.items, setCookie]);
+
     const handleAddToProductToCart = (productId) => {
         cartDispatch({
             type: AJOUTER_DANS_PANIER,
